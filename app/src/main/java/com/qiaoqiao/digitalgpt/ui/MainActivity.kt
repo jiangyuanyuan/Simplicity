@@ -1,14 +1,10 @@
-package com.qiaoqiao.digitalgpt
+package com.qiaoqiao.digitalgpt.ui
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.elvishew.xlog.XLog
-import com.infore.base.common.BaseActivity
 import com.infore.base.common.EasyAdapter
 import com.infore.base.utils.onclick
 import com.infore.base.utils.toJsonString
