@@ -2,6 +2,8 @@ package com.qiaoqiao.digitalgpt
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,6 +15,7 @@ import com.infore.base.utils.toJsonString
 import com.qiaoqiao.digitalgpt.common.AppBaseActivity
 import com.qiaoqiao.digitalgpt.data.net.BaseParam
 import com.qiaoqiao.digitalgpt.databinding.ActivityMainBinding
+import com.qiaoqiao.digitalgpt.databinding.ItemListBinding
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
@@ -21,7 +24,7 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>() {
 
 
 
-    private var mAdapter : EasyAdapter<String>?=null
+    private var mAdapter : EasyAdapter<String,ItemListBinding>?=null
     private val mList = mutableListOf<String>()
 
 
@@ -64,7 +67,7 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>() {
 
         //list列表的操作
         binding.rvList.layoutManager =  LinearLayoutManager(this)
-        mAdapter =  getAdapter()
+        mAdapter =  MyAdapter()
         binding.rvList.adapter  = mAdapter
 
         mList.add("1")
@@ -76,12 +79,17 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>() {
 
     }
 
-    private fun getAdapter():EasyAdapter<String>{
-        return EasyAdapter(R.layout.item_list){view, i, item->
-            view.findViewById<TextView>(R.id.tv_item).text = item
+     class MyAdapter():EasyAdapter<String,ItemListBinding>({
+         viewBinding,i,item->
+         //数据绑定操作
+         viewBinding.tvItem.text = item
 
-        }
-    }
+     }){
+         override fun getViewBinding(parent: ViewGroup): ItemListBinding {
+             return ItemListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+         }
+
+     }
 
 
 }
