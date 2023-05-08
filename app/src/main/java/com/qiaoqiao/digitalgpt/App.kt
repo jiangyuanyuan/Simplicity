@@ -30,7 +30,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         //持久化初始化
-        Hawk.init(this)
+        Hawk.init(this).build()
         //注入初始化
         initKoin()
         //日志初始化

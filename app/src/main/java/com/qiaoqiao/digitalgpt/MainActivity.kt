@@ -12,8 +12,10 @@ import com.infore.base.common.BaseActivity
 import com.infore.base.common.EasyAdapter
 import com.infore.base.utils.onclick
 import com.infore.base.utils.toJsonString
+import com.orhanobut.hawk.Hawk
 import com.qiaoqiao.digitalgpt.common.AppBaseActivity
 import com.qiaoqiao.digitalgpt.data.net.BaseParam
+import com.qiaoqiao.digitalgpt.data.net.BaseRep
 import com.qiaoqiao.digitalgpt.databinding.ActivityMainBinding
 import com.qiaoqiao.digitalgpt.databinding.ItemListBinding
 import kotlinx.coroutines.flow.collectLatest
@@ -39,10 +41,19 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>() {
             lifecycleScope?.launch {
                 mViewModel?.getBanner()?.collectLatest {
                     XLog.d(it)
-                    toast(it.toJsonString())
+                    toast(it?.toJsonString())
+                    //持久化到本地
+                    Hawk.put("GET_KEY",it)
                 }
             }
         }
+        //持久化的本地获取数据
+        binding.tvGetLocal.onclick {
+            val local = Hawk.get<BaseRep<Any>>("GET_KEY")
+            toast(local?.toJsonString())
+        }
+
+
         //post 请求
         binding.tvPost.onclick {
             lifecycleScope?.launch {
@@ -51,7 +62,7 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>() {
                 baseParam["password"] = "test"
                 mViewModel?.login(baseParam)?.collectLatest {
                     XLog.d(it)
-                    toast(it.toJsonString())
+                    toast(it?.toJsonString())
                 }
             }
 
