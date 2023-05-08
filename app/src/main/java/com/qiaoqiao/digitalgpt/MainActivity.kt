@@ -38,10 +38,6 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>() {
         binding.tvGet.onclick {
             lifecycleScope?.launch {
                 mViewModel?.getBanner()?.collectLatest {
-                    if (it.isSuccessed()){
-                        XLog.d(it)
-                        toast(it.toJsonString())
-                    }
                     XLog.d(it)
                     toast(it.toJsonString())
                 }
