@@ -4,6 +4,7 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.viewbinding.ViewBinding
 import com.infore.base.R
 
 
@@ -11,17 +12,22 @@ import com.infore.base.R
  * 简单Adapter
  */
 
-open class EasyAdapter<T>(private val layoutResId: Int, private val bindView: (View, Int, T) -> Unit) :
-        RecyclerView.Adapter<EasyAdapter.ViewHolder<T>>() {
+abstract class EasyAdapter<T,V :ViewBinding>( private val bindView: (V, Int, T) -> Unit) :
+        RecyclerView.Adapter<EasyAdapter.ViewHolder<T,V>>() {
 
     private var mData = mutableListOf<T>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder<T> {
-        val view = LayoutInflater.from(parent.context).inflate(layoutResId, parent, false)
-        return ViewHolder(view, bindView)
+    private lateinit var _binding: V
+    protected val binding get() = _binding;
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder<T,V> {
+        _binding = getViewBinding(parent)
+        return ViewHolder(binding, bindView)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder<T>, position: Int) {
+    protected abstract fun getViewBinding(parent: ViewGroup): V
+
+    override fun onBindViewHolder(holder: ViewHolder<T,V>, position: Int) {
         holder.bind(mData[position], position)
     }
 
@@ -38,11 +44,11 @@ open class EasyAdapter<T>(private val layoutResId: Int, private val bindView: (V
 
     fun getData() = mData
 
-    class ViewHolder<in T>(view: View, private val bindView: (View, Int, T) -> Unit) : RecyclerView.ViewHolder(view) {
+    class ViewHolder<in T,V :ViewBinding>(val viewBinding: V, private val bindView: (V, Int, T) -> Unit) : RecyclerView.ViewHolder(viewBinding.root) {
         fun bind(item: T, position: Int) {
             with(item) {
                 itemView.setTag(R.id.easyadapter_position, position)
-                bindView(itemView, position, item)
+                bindView(viewBinding, position, item)
             }
         }
     }
