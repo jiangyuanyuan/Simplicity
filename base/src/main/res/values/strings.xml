@@ -1,0 +1,191 @@
+<resources>
+    <string name="app_name">scrubber</string>
+
+    <string name="title_home">室内洗地机器人</string>
+    <string name="title_onekey_work">一键作业</string>
+    <string name="title_task_setting">任务设置</string>
+    <string name="title_custom_work">自定义作业</string>
+    <string name="title_manual_work">手动作业</string>
+    <string name="manual_model">手动模式</string>
+    <string name="title_setting">设置</string>
+    <string name="title_path_record">录制路径</string>
+    <string name="title_path_combination">组合路径</string>
+    <string name="control_pane">控制面板</string>
+    <string name="title_status">状态</string>
+    <string name="title_warning">报警</string>
+    <string name="title_map">地图</string>
+    <string name="title_select_task">选择任务</string>
+
+    <string name="adapter_map_title"><![CDATA[%1$s<br><small>\t%2$s</small></br>]]></string>
+
+    <string name="warning">警告</string>
+    <string name="placeholder">%1$s\n%2$s</string>
+
+    <string name="ensure">确认</string>
+    <string name="cancel">取消</string>
+
+    <string name="load_map">加载地图</string>
+    <string name="start_work">开始作业</string>
+    <string name="stop_work">停止作业</string>
+
+    <string name="start_record">开始录制</string>
+    <string name="save_path">保存路径</string>
+    <string name="cancel_record">取消录制</string>
+    <string name="switch_demo_model">切换示教模式</string>
+    <string name="switch_coverage_model">切换全覆盖模式</string>
+    <string name="model_switch_tips">正在录制路径中，请先取消或保存路径后再切换模式</string>
+
+    <string name="params_setting">参数设置</string>
+    <string name="status_machine">设备状态</string>
+    <string name="map_path">地图路径</string>
+    <string name="info_machine">本机信息</string>
+    <string name="about_us">关于我们</string>
+
+    <string name="deleted">删除</string>
+    <string name="graffiti">编辑</string>
+    <string name="map_graffiti">编辑地图</string>
+    <string name="path_graffiti">编辑路径</string>
+
+    <string name="add_virtual_wall">增加虚拟墙</string>
+
+    <string name="confirm">确定</string>
+    <string name="home_dimension">%1$s m²\n清洁面积</string>
+    <string name="home_electric">%1$s %\n剩余电量</string>
+    <string name="home_work_time">%1$s min\n清洁时间</string>
+    <string name="task_status"><![CDATA[%1$s：<font color="black">%2$s</font>]]></string>
+    <string name="home_tips">没有保存地图，请到地图管理页面新建地图</string>
+
+    <string name="tips_same_name_map">已存在相同名称的地图</string>
+    <string name="tips_recording">正在录制中，请取消或保存路径后重新开始录制</string>
+    <string name="tips_save_path_before_record">请先开始录制</string>
+    <string name="tips_same_name_path">已存在相同名称的路径，请重新输入</string>
+    <string name="tips_not_contain_path">当前地图没有录制路径，请先录制路径</string>
+
+    <string name="map_manager">地图管理</string>
+    <string name="path_manager">路径管理</string>
+    <string name="new_path">新建路径</string>
+    <string name="home_charge">开始回充</string>
+    <string name="cancel_charge">取消回充</string>
+    <string name="home_cancel_work">停止清扫</string>
+    <string name="home_start_work">开始清扫</string>
+
+    <string name="new_map">新建地图</string>
+    <string name="start_record_map">开始扫描</string>
+    <string name="cancel_record_map">取消扫描</string>
+    <string name="save_record_map">保存</string>
+    <string name="save_map">保存地图</string>
+
+    <string name="new_map_cancel_dialog_subtitle">取消扫描后，将不会保存本次地图数据，且回退到上一个页面，是否要取消扫描？</string>
+    <string name="new_map_save_dialog_hint">请输入将要保存的地图/路径名称</string>
+
+    <string name="new_path_cancel_dialog_subtitle">取消录制后，将不会保存本次路径数据，是否要取消扫描？</string>
+    <string name="model_switch">模式选择</string>
+    <string name="default_model">默认模式</string>
+    <string name="near_wall_model">贴边模式</string>
+
+    <string name="edit">编辑</string>
+    <string name="map_switch">切换地图</string>
+    <string name="tips_map_switch">是否将该地图加载到首页进行作业？</string>
+
+    <string name="path_teach">示教</string>
+    <string name="path_coverage">全覆盖</string>
+    <string name="path_combination">组合</string>
+
+    <string name="delete_path">删除路径</string>
+    <string name="tips_delete_path">确认是否要删除该路径？</string>
+
+    <string name="save_comb_path">保存组合路径</string>
+    <string name="tips_combination_path">当前地图没有录制路径，请先录制路径后再进行组合</string>
+    <string name="update_comb_path">更新组合路径</string>
+    <string name="tips_update_comb_path">当前地图已存在组合路径，是否将新选择的路径合并到已存在的组合路径中？</string>
+    <string name="tips_comb_not_select">请先选择路径进行组合</string>
+    <string name="tips_have_not_comb_path">当前地图没有进行任务设定，请先到路径管理中进行路径组合</string>
+    <string name="tips_save_failed"> 保存失败，请重试</string>
+    <string name="tip_task_not_selected">没有进行任务选定，请先选择任务</string>
+    <string name="tip_map_not_selected">没有进行地图选定，请先选择地图</string>
+    <string name="tips_have_same_task_name">已存在相同名称的任务，请重新输入</string>
+    <string name="tips_select_map_first">请先选择地图进行加载</string>
+
+    <!-- Dialog -->
+    <string name="home_exec_task_title">提示</string>
+    <string name="home_exec_task_subtitle">没有作业任务，请先进行任务设置</string>
+    <string name="title_task_select">任务选择</string>
+    <string name="title_map_select">地图选择</string>
+    <!-- Dialog -->
+
+    <!--config setting-->
+    <string name="config_setting">参数设置</string>
+    <string name="config_ip_setting">IP 设置:</string>
+    <string name="title_machine_status">设备状态</string>
+    <string name="adapter_machine_status_title"><![CDATA[%1$s：<small>%2$s</small>]]></string>
+    <string name="config_auto_drive_speed">自动驾驶速度标定系数</string>
+    <string name="config_speed_low">低速</string>
+    <string name="config_speed_middle">中速</string>
+    <string name="config_speed_high">高速</string>
+
+    <string name="config_roll_radius_hint">单位：m</string>
+    <string name="volume_hint">值范围为0~100</string>
+
+    <string name="config_roll_radius">轮半径</string>
+    <string name="roll_radius_url">/cmd/set_roll_radius?value=</string>
+
+    <string name="config_roll_distance">轮间距</string>
+    <string name="roll_distance_url">/cmd/set_roll_dis?value=</string>
+
+    <string name="config_model_switch">模式切换</string>
+    <string name="model_switch_url">/cmd/change_mode?value=</string>
+
+    <string name="config_urgency_stop">急停复位</string>
+    <string name="urgency_stop_url">/cmd/reset_stop?value=</string>
+
+    <string name="config_auto_run_control">自动模式-行驶使能</string>
+    <string name="auto_run_control_url">/cmd/permit_auto_mode?value=</string>
+
+    <string name="config_emergency_stop">急停</string>
+    <string name="emergency_stop_url">/cmd/emergency_stop?value=</string>
+
+    <string name="config_fan_on">吸风电机启停</string>
+    <string name="fan_on_url">/cmd/fan_on?value=</string>
+
+    <string name="config_brush_on">刷盘/滚刷电机启停</string>
+    <string name="brush_on_url">/cmd/brush_on?value=</string>
+
+    <string name="config_dirt_push_up">尘推电推杆升降</string>
+    <string name="dirt_push_up_url">/cmd/dirt_push_up?value=</string>
+
+    <string name="config_brush_push_up">滚刷底盘电推杆升降</string>
+    <string name="brush_push_up_url">/cmd/brush_push_up?value=</string>
+
+    <string name="config_mute_mode">静音模式</string>
+    <string name="mute_mode_url">/cmd/mute_mode?value=</string>
+
+    <string name="config_all_motor_on">启动所有作业电机</string>
+    <string name="all_motor_on_url">/cmd/all_motor_on?value=</string>
+
+    <string name="config_volume">音量设置</string>
+    <string name="volume_url">/cmd/set_volume?value=</string>
+
+    <string name="config_fan_speed">吸风电机</string>
+    <string name="config_fan_speed_url">/cmd/fan_speed?value=</string>
+
+    <string name="config_brush_speed">刷盘电机</string>
+    <string name="config_brush_speed_url">/cmd/brush_speed?value=</string>
+
+    <!--config setting-->
+
+    <!-- home -->
+    <string name="self_inspection">设备检查</string>
+    <string name="task_manager">任务管理</string>
+    <string name="welcome">欢迎使用</string>
+    <!-- home -->
+
+    <string name="title_path_select">选择路径</string>
+    <string name="flag_all_path">全部路径</string>
+    <string name="flag_selected_path">已选路径</string>
+
+    <string name="start_task">开始任务</string>
+    <string name="select_path">选择路径</string>
+    <string name="new_task">新建任务</string>
+    <string name="input_task_name">请输入任务名称</string>
+
+</resources>

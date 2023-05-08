@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_cancel_normal">#ffd5d8dd</color>
+    <color name="color_cancel_click">#ffc9c6c2</color>
+    <color name="color_text_normal">#8BCDE9</color>
+    <color name="color_text_click">#179BD4</color>
+    <color name="color_text">#553c3f41</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_bg_blue">#0e6ab6</color>
+
+    <color name="color_setting_text">#666666</color>
+    <color name="bg_view_line_divider">#dfdfdf</color>
+
+    <color name="color_text_666">#6e6e6e</color>
+    <color name="black">#000000</color>
+    <color name="tmp">#f2df0d</color>
+
+    <color name="test">#ffdddddd</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="item_bg_rename">#0790D6</color>
+    <color name="item_bg_manege">#04CBE5</color>
+    <color name="item_bg_delete">#C3266A</color>
+    <color name="text_color_status">#0BDFFB</color>
+</resources>
