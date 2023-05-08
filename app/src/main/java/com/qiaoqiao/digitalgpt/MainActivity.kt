@@ -54,10 +54,8 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>() {
                 baseParam["username"] = "test"
                 baseParam["password"] = "test"
                 mViewModel?.login(baseParam)?.collectLatest {
-                    if (it.isSuccessed()){
-                        XLog.d(it)
-                        toast(it.toJsonString())
-                    }
+                    XLog.d(it)
+                    toast(it.toJsonString())
                 }
             }
 
