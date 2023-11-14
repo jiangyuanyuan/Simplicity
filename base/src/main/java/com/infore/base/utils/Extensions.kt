@@ -154,7 +154,7 @@ fun String.hide(beforeLength: Int, afterLength: Int): String {
 
 fun EditText?.Text(string: String?) {
     if (string == null || string?.isNullOrBlank() == true) return
-    this?.setText(string?.toCharArray(), 0, string?.length ?: 0)
+    this?.setText(string.toCharArray(), 0, string?.length ?: 0)
     this?.setSelection(this?.text?.length ?: 0)
 }
 
